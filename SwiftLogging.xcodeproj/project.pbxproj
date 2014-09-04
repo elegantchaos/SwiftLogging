@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		22EC40DF19B907F500DFADE6 /* SwiftLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EC40DE19B907F500DFADE6 /* SwiftLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22EC40E919B907F500DFADE6 /* SwiftLoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40E819B907F500DFADE6 /* SwiftLoggingTests.swift */; };
+		22EC40F319B9091500DFADE6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F219B9091500DFADE6 /* Channel.swift */; };
+		22EC40F519B90D0100DFADE6 /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F419B90D0100DFADE6 /* Handler.swift */; };
+		22EC40F719B90D6700DFADE6 /* ConsoleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F619B90D6700DFADE6 /* ConsoleHandler.swift */; };
+		22EC40F919B90E8000DFADE6 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F819B90E8000DFADE6 /* LogManager.swift */; };
+		22EC40FB19B9108B00DFADE6 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40FA19B9108B00DFADE6 /* Context.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +23,11 @@
 		22EC40E419B907F500DFADE6 /* SwiftLoggingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLoggingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EC40E719B907F500DFADE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EC40E819B907F500DFADE6 /* SwiftLoggingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLoggingTests.swift; sourceTree = "<group>"; };
+		22EC40F219B9091500DFADE6 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		22EC40F419B90D0100DFADE6 /* Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
+		22EC40F619B90D6700DFADE6 /* ConsoleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleHandler.swift; sourceTree = "<group>"; };
+		22EC40F819B90E8000DFADE6 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		22EC40FA19B9108B00DFADE6 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				22EC40DE19B907F500DFADE6 /* SwiftLogging.h */,
+				22EC40F219B9091500DFADE6 /* Channel.swift */,
+				22EC40FA19B9108B00DFADE6 /* Context.swift */,
+				22EC40F819B90E8000DFADE6 /* LogManager.swift */,
+				22EC40F619B90D6700DFADE6 /* ConsoleHandler.swift */,
+				22EC40F419B90D0100DFADE6 /* Handler.swift */,
 				22EC40DC19B907F500DFADE6 /* Supporting Files */,
 			);
 			path = SwiftLogging;
@@ -196,6 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EC40F919B90E8000DFADE6 /* LogManager.swift in Sources */,
+				22EC40F519B90D0100DFADE6 /* Handler.swift in Sources */,
+				22EC40F719B90D6700DFADE6 /* ConsoleHandler.swift in Sources */,
+				22EC40FB19B9108B00DFADE6 /* Context.swift in Sources */,
+				22EC40F319B9091500DFADE6 /* Channel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +314,7 @@
 		22EC40ED19B907F500DFADE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -305,12 +326,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		22EC40EE19B907F500DFADE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -376,6 +399,7 @@
 				22EC40EE19B907F500DFADE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22EC40EF19B907F500DFADE6 /* Build configuration list for PBXNativeTarget "SwiftLoggingTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +408,7 @@
 				22EC40F119B907F500DFADE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
