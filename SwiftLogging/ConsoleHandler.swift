@@ -14,7 +14,9 @@ public class ConsoleHandler: Handler {
     public func log(object: AnyObject, channel : Channel, context: Context) {
         if enabled {
             let text = object.description
-            println("\(channel.name): \(text) (\(context.function), \(context.file): \(context.line), \(context.column))")
+            let prefix = ContextFormatter.prefix(channel, context: context)
+            let suffix = ContextFormatter.suffix(channel, context: context)
+            println("\(prefix)\(text)\(suffix)")
         }
     }
 

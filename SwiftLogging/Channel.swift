@@ -13,17 +13,24 @@ public class Channel {
     let name: String
     var handlers: [Handler]
     public var enabled: Bool;
+    public var showName : Bool = true
+    public var showFile : Bool = false
+    public var showLineColumn : Bool = false
+    public var showFunction : Bool = true
 
     public init(name: String) {
 
             self.name = name
             self.handlers = [Handler]()
-            self.handlers.append(ConsoleHandler())
             self.enabled = true;
 
             defaultManager.registerChannel(self);
     }
 
+
+    public func addHandler(handler : Handler) {
+        self.handlers.append(handler)
+    }
 
     public func log(
         message: @autoclosure() -> AnyObject,

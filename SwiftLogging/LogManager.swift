@@ -13,6 +13,7 @@ let defaultManager = LogManager()
 public class LogManager {
 
     public func registerChannel(channel : Channel) -> () {
-
+        // TODO: read settings and use them to set up handlers, and configure the channel
+        channel.addHandler(ConsoleHandler())
     }
 }
