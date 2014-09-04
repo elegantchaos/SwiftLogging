@@ -10,8 +10,12 @@ import Cocoa
 import XCTest
 import SwiftLogging
 
+let testChannel = Channel(name:"test")
+
 class SwiftLoggingTests: XCTestCase {
-    
+
+    var funcCalled : Bool = false
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,9 +25,14 @@ class SwiftLoggingTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
+    func calculatedValue() -> Int {
+        self.funcCalled = true;
+        return 123;
+    }
+
     func testExample() {
-        let channel = Channel(name:"test")
+        let channel = Channel(name:"local")
 
         channel.log("this is a test")
         channel.log(1)
@@ -32,6 +41,12 @@ class SwiftLoggingTests: XCTestCase {
         let x = 1
         let y = 1.23
         channel.log("a formatted test x is \(x), y is \(y)")
+
+        testChannel.log("hello")
+
+        channel.enabled = false
+        channel.log("this shouldn't be logged \(self.calculatedValue())")
+        XCTAssertFalse(self.funcCalled, "shouldn't evaluate expression for disabled channel")
     }
     
 }

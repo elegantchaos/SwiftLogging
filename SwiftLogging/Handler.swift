@@ -9,7 +9,7 @@
 import Cocoa
 
 public protocol Handler {
-    func log(object: AnyObject, context: Context);
+    func log(object: AnyObject, channel : Channel, context: Context);
 
     func enable();
     func disable();

@@ -12,11 +12,13 @@ public class Context {
     let file: String
     let line : Int
     let function : String
+    let column : Int
 
-    public init(file: String = __FILE__, line: Int = __LINE__,  function: String = __FUNCTION__) {
+    public init(file: String = __FILE__, line: Int = __LINE__,  column: Int = __COLUMN__, function: String = __FUNCTION__) {
         self.file = file
         self.line = line
         self.function = function
+        self.column = column
     }
 
 }

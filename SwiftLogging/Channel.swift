@@ -12,7 +12,7 @@ public class Channel {
 
     let name: String
     var handlers: [Handler]
-    var enabled: Bool;
+    public var enabled: Bool;
 
     public init(name: String) {
 
@@ -27,27 +27,18 @@ public class Channel {
 
     public func log(
         message: @autoclosure() -> AnyObject,
-        context: Context = Context()) {
+        file: String = __FILE__,
+        line: Int = __LINE__,
+        column: Int = __COLUMN__,
+        function: String = __FUNCTION__) {
             if (self.enabled) {
                 let object : AnyObject = message()
+                let context = Context(file:file, line:line, column:column, function:function)
                 for handler in handlers {
-                    handler.log(object, context:context)
+                    handler.log(object, channel:self, context:context)
                 }
             }
 }
 
 }
-//    func log(logMessage: String, functionName: String = __FUNCTION__) {
-//    println("\(functionName): \(logMessage)")
-//    }
-//
-//    __FILE__ String The name of the file in which it appears.
-//
-//    __LINE__ Int The line number on which it appears.
-//
-//    __COLUMN__ Int The column number in which it begins.
-//
-//    __FUNCTION__ String The name of the declaration in which it appears.
-//    
-
 // https://github.com/hubertr/Swell

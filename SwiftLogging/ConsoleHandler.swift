@@ -11,10 +11,10 @@ import Foundation
 public class ConsoleHandler: Handler {
     var enabled = true
 
-    public func log(object: AnyObject, context: Context) {
+    public func log(object: AnyObject, channel : Channel, context: Context) {
         if enabled {
             let text = object.description
-            println(text)
+            println("\(channel.name): \(text) (\(context.function), \(context.file): \(context.line), \(context.column))")
         }
     }
 
