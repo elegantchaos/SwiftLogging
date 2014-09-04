@@ -32,14 +32,14 @@ public class Channel {
         self.handlers.append(handler)
     }
 
-    public func log(
-        message: @autoclosure() -> AnyObject,
+    public func log<T>(
+        message: @autoclosure() -> T,
         file: String = __FILE__,
         line: Int = __LINE__,
         column: Int = __COLUMN__,
         function: String = __FUNCTION__) {
             if (self.enabled) {
-                let object : AnyObject = message()
+                let object = message()
                 let context = Context(file:file, line:line, column:column, function:function)
                 for handler in handlers {
                     handler.log(object, channel:self, context:context)

@@ -27,7 +27,9 @@ class SwiftLoggingTests: XCTestCase {
         channel.log("this is a test")
         channel.log(1)
         channel.log(1.234)
-
+        channel.log((1,2))
+        channel.log([1,2])
+        
         let x = 1
         let y = 1.23
         channel.log("a formatted test x is \(x), y is \(y)")
@@ -36,6 +38,8 @@ class SwiftLoggingTests: XCTestCase {
 
         channel.enabled = false
         channel.log("this shouldn't be logged \(self.calculatedValue())")
+        channel.log(23 * self.calculatedValue())
+
         XCTAssertFalse(self.funcCalled, "shouldn't evaluate expression for disabled channel")
     }
     

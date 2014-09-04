@@ -11,12 +11,11 @@ import Foundation
 public class ConsoleHandler: Handler {
     var enabled = true
 
-    public func log(object: AnyObject, channel : Channel, context: Context) {
+    public func log<T>(object: T, channel : Channel, context: Context) {
         if enabled {
-            let text = object.description
             let prefix = ContextFormatter.prefix(channel, context: context)
             let suffix = ContextFormatter.suffix(channel, context: context)
-            println("\(prefix)\(text)\(suffix)")
+            println("\(prefix)\(object)\(suffix)")
         }
     }
 
