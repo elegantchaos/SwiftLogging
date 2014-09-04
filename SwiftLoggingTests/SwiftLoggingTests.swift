@@ -26,6 +26,12 @@ class SwiftLoggingTests: XCTestCase {
         let channel = Channel(name:"test")
 
         channel.log("this is a test")
+        channel.log(1)
+        channel.log(1.234)
+
+        let x = 1
+        let y = 1.23
+        channel.log("a formatted test x is \(x), y is \(y)")
     }
     
 }
