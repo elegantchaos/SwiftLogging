@@ -8,6 +8,7 @@
 
 import Cocoa
 import XCTest
+import SwiftLogging
 
 class SwiftLoggingTests: XCTestCase {
     
@@ -22,7 +23,7 @@ class SwiftLoggingTests: XCTestCase {
     }
     
     func testExample() {
-        let channel = Channel("test")
+        let channel = Channel(name:"test")
 
         channel.log("this is a test")
     }

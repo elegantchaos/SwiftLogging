@@ -14,6 +14,7 @@
 		22EC40F719B90D6700DFADE6 /* ConsoleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F619B90D6700DFADE6 /* ConsoleHandler.swift */; };
 		22EC40F919B90E8000DFADE6 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F819B90E8000DFADE6 /* LogManager.swift */; };
 		22EC40FB19B9108B00DFADE6 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40FA19B9108B00DFADE6 /* Context.swift */; };
+		22EC40FC19B9159C00DFADE6 /* SwiftLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EC40D919B907F500DFADE6 /* SwiftLogging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EC40FC19B9159C00DFADE6 /* SwiftLogging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,12 +25,13 @@ public class Channel {
     }
 
 
-    public func log<T>(
-        message: @autoclosure() -> T,
+    public func log(
+        message: @autoclosure() -> AnyObject,
         context: Context = Context()) {
             if (self.enabled) {
+                let object : AnyObject = message()
                 for handler in handlers {
-                    handler.log(message, context)
+                    handler.log(object, context:context)
                 }
             }
 }

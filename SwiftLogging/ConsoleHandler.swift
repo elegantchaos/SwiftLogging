@@ -11,21 +11,10 @@ import Foundation
 public class ConsoleHandler: Handler {
     var enabled = true
 
-    // Use the static-inside-class-var approach to getting a class var instance
-    class var instance: ConsoleHandler {
-    struct Static {
-        static let internalInstance = ConsoleHandler()
-        }
-        return Static.internalInstance
-    }
-
-    public class func getInstance() -> Handler {
-        return instance
-    }
-
-    public func log(message: @autoclosure() -> String) {
+    public func log(object: AnyObject, context: Context) {
         if enabled {
-            println(message())
+            let text = object.description
+            println(text)
         }
     }
 
