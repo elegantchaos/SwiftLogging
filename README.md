@@ -11,4 +11,4 @@ I'm still exploring the possibilities at the moment, but the main priorities are
 - no runtime impact of debug logging or channels in release
 - natural swift syntax
 
-For no I don't intend to support Objective-C in this library - mixed language projects can continue to use ECLogging
+For now I don't intend to support Objective-C in this library - mixed language projects can continue to use ECLogging

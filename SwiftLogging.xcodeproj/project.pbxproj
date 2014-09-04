@@ -31,6 +31,7 @@
 		22EC40F819B90E8000DFADE6 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		22EC40FA19B9108B00DFADE6 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		22EC40FD19B91F1100DFADE6 /* ContextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextFormatter.swift; sourceTree = "<group>"; };
+		22EC40FF19B924F900DFADE6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		22EC40CF19B907F500DFADE6 = {
 			isa = PBXGroup;
 			children = (
+				22EC40FF19B924F900DFADE6 /* README.md */,
 				22EC40DB19B907F500DFADE6 /* SwiftLogging */,
 				22EC40E519B907F500DFADE6 /* SwiftLoggingTests */,
 				22EC40DA19B907F500DFADE6 /* Products */,
