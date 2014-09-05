@@ -84,7 +84,7 @@ public class LogManager {
     }
     
     func settingsKeys() -> [String] {
-        #if DEBUG
+        #if EC_DEBUG
             let keys = ["ECLoggingDebug", "ECLogging"]
         #else
             let keys = ["ECLogging"]

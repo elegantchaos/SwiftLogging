@@ -47,4 +47,15 @@ public class Channel {
             }
     }
     
+    public func debug<T>(
+        message: @autoclosure() -> T,
+        file: String = __FILE__,
+        line: Int = __LINE__,
+        column: Int = __COLUMN__,
+        function: String = __FUNCTION__) {
+            #if EC_DEBUG
+                log(message, file:file, line:line, column: column, function:function)
+            #endif
+    }
+    
 }
