@@ -18,13 +18,13 @@ public class Channel {
     public var showLineColumn : Bool = false
     public var showFunction : Bool = true
     
-    public init(name: String) {
+    public init(name: String, manager : LogManager = LogManager.defaultManager()) {
         
         self.name = name
         self.handlers = [Handler]()
         self.enabled = true;
         
-        defaultManager.registerChannel(self);
+        manager.registerChannel(self);
     }
     
     

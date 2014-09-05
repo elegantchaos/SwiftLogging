@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		221CB99719B9EC4E00B74D0B /* ASLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CB99619B9EC4E00B74D0B /* ASLHandler.swift */; };
 		229CF5F719B9F9EF00241D7E /* SwiftLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EC40D919B907F500DFADE6 /* SwiftLogging.framework */; };
+		229CF5FA19BA107500241D7E /* ECLogging.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229CF5F819BA107500241D7E /* ECLogging.plist */; };
+		229CF5FB19BA107500241D7E /* ECLoggingDebug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229CF5F919BA107500241D7E /* ECLoggingDebug.plist */; };
 		22EAEA9219B9F1A800C0FBD0 /* ASLHandler.loghandler in CopyFiles */ = {isa = PBXBuildFile; fileRef = 221CB98E19B9EC2700B74D0B /* ASLHandler.loghandler */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22EC40DF19B907F500DFADE6 /* SwiftLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EC40DE19B907F500DFADE6 /* SwiftLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22EC40E919B907F500DFADE6 /* SwiftLoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40E819B907F500DFADE6 /* SwiftLoggingTests.swift */; };
@@ -63,6 +65,8 @@
 		221CB99119B9EC2700B74D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		221CB99519B9EC4D00B74D0B /* ASLHandler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASLHandler-Bridging-Header.h"; sourceTree = "<group>"; };
 		221CB99619B9EC4E00B74D0B /* ASLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLHandler.swift; sourceTree = "<group>"; };
+		229CF5F819BA107500241D7E /* ECLogging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECLogging.plist; path = SwiftLoggingTests/ECLogging.plist; sourceTree = SOURCE_ROOT; };
+		229CF5F919BA107500241D7E /* ECLoggingDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECLoggingDebug.plist; path = SwiftLoggingTests/ECLoggingDebug.plist; sourceTree = SOURCE_ROOT; };
 		22EC40D919B907F500DFADE6 /* SwiftLogging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLogging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EC40DD19B907F500DFADE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EC40DE19B907F500DFADE6 /* SwiftLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLogging.h; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				221CB99119B9EC2700B74D0B /* Info.plist */,
+				229CF5F819BA107500241D7E /* ECLogging.plist */,
+				229CF5F919BA107500241D7E /* ECLoggingDebug.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229CF5FB19BA107500241D7E /* ECLoggingDebug.plist in Resources */,
+				229CF5FA19BA107500241D7E /* ECLogging.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

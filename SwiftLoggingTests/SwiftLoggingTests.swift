@@ -22,7 +22,7 @@ class SwiftLoggingTests: XCTestCase {
 
     override func setUp() {
         let bundle = NSBundle(forClass:self.dynamicType)
-        defaultManager.registerHandlersFromBundle(bundle)
+        LogManager.defaultManager().registerHandlersFromBundle(bundle)
     }
     
     func calculatedValue() -> Int {
