@@ -20,6 +20,20 @@
                ReferencedContainer = "container:SwiftLogging.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "221CB98D19B9EC2700B74D0B"
+               BuildableName = "ASLHandler.loghandler"
+               BlueprintName = "ASLHandler"
+               ReferencedContainer = "container:SwiftLogging.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221CB99719B9EC4E00B74D0B /* ASLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CB99619B9EC4E00B74D0B /* ASLHandler.swift */; };
+		229CF5F719B9F9EF00241D7E /* SwiftLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EC40D919B907F500DFADE6 /* SwiftLogging.framework */; };
+		22EAEA9219B9F1A800C0FBD0 /* ASLHandler.loghandler in CopyFiles */ = {isa = PBXBuildFile; fileRef = 221CB98E19B9EC2700B74D0B /* ASLHandler.loghandler */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22EC40DF19B907F500DFADE6 /* SwiftLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EC40DE19B907F500DFADE6 /* SwiftLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22EC40E919B907F500DFADE6 /* SwiftLoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40E819B907F500DFADE6 /* SwiftLoggingTests.swift */; };
 		22EC40F319B9091500DFADE6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40F219B9091500DFADE6 /* Channel.swift */; };
@@ -18,7 +21,48 @@
 		22EC40FE19B91F1100DFADE6 /* ContextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EC40FD19B91F1100DFADE6 /* ContextFormatter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		22EAEA9319B9F89300C0FBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EC40D019B907F500DFADE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22EC40D819B907F500DFADE6;
+			remoteInfo = SwiftLogging;
+		};
+		22EAEA9519B9F89300C0FBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EC40D019B907F500DFADE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221CB98D19B9EC2700B74D0B;
+			remoteInfo = ASLHandler;
+		};
+		22EAEA9719B9F8A600C0FBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EC40D019B907F500DFADE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22EC40D819B907F500DFADE6;
+			remoteInfo = SwiftLogging;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22EAEA9119B9F19900C0FBD0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22EAEA9219B9F1A800C0FBD0 /* ASLHandler.loghandler in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		221CB98E19B9EC2700B74D0B /* ASLHandler.loghandler */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASLHandler.loghandler; sourceTree = BUILT_PRODUCTS_DIR; };
+		221CB99119B9EC2700B74D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221CB99519B9EC4D00B74D0B /* ASLHandler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASLHandler-Bridging-Header.h"; sourceTree = "<group>"; };
+		221CB99619B9EC4E00B74D0B /* ASLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLHandler.swift; sourceTree = "<group>"; };
 		22EC40D919B907F500DFADE6 /* SwiftLogging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLogging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EC40DD19B907F500DFADE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EC40DE19B907F500DFADE6 /* SwiftLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLogging.h; sourceTree = "<group>"; };
@@ -35,6 +79,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		221CB98B19B9EC2700B74D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229CF5F719B9F9EF00241D7E /* SwiftLogging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22EC40D519B907F500DFADE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,12 +105,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221CB98F19B9EC2700B74D0B /* ASLHandler */ = {
+			isa = PBXGroup;
+			children = (
+				221CB99019B9EC2700B74D0B /* Supporting Files */,
+				221CB99619B9EC4E00B74D0B /* ASLHandler.swift */,
+				221CB99519B9EC4D00B74D0B /* ASLHandler-Bridging-Header.h */,
+			);
+			path = ASLHandler;
+			sourceTree = "<group>";
+		};
+		221CB99019B9EC2700B74D0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				221CB99119B9EC2700B74D0B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		22EC40CF19B907F500DFADE6 = {
 			isa = PBXGroup;
 			children = (
 				22EC40FF19B924F900DFADE6 /* README.md */,
-				22EC40DB19B907F500DFADE6 /* SwiftLogging */,
-				22EC40E519B907F500DFADE6 /* SwiftLoggingTests */,
+				22EC40DB19B907F500DFADE6 /* Classes */,
+				22EC40E519B907F500DFADE6 /* Tests */,
+				221CB98F19B9EC2700B74D0B /* ASLHandler */,
 				22EC40DA19B907F500DFADE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,11 +139,12 @@
 			children = (
 				22EC40D919B907F500DFADE6 /* SwiftLogging.framework */,
 				22EC40E419B907F500DFADE6 /* SwiftLoggingTests.xctest */,
+				221CB98E19B9EC2700B74D0B /* ASLHandler.loghandler */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22EC40DB19B907F500DFADE6 /* SwiftLogging */ = {
+		22EC40DB19B907F500DFADE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				22EC40DE19B907F500DFADE6 /* SwiftLogging.h */,
@@ -84,6 +156,7 @@
 				22EC40F419B90D0100DFADE6 /* Handler.swift */,
 				22EC40DC19B907F500DFADE6 /* Supporting Files */,
 			);
+			name = Classes;
 			path = SwiftLogging;
 			sourceTree = "<group>";
 		};
@@ -95,12 +168,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		22EC40E519B907F500DFADE6 /* SwiftLoggingTests */ = {
+		22EC40E519B907F500DFADE6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				22EC40E819B907F500DFADE6 /* SwiftLoggingTests.swift */,
 				22EC40E619B907F500DFADE6 /* Supporting Files */,
 			);
+			name = Tests;
 			path = SwiftLoggingTests;
 			sourceTree = "<group>";
 		};
@@ -126,6 +200,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		221CB98D19B9EC2700B74D0B /* ASLHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221CB99219B9EC2700B74D0B /* Build configuration list for PBXNativeTarget "ASLHandler" */;
+			buildPhases = (
+				221CB98A19B9EC2700B74D0B /* Sources */,
+				221CB98B19B9EC2700B74D0B /* Frameworks */,
+				221CB98C19B9EC2700B74D0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22EAEA9819B9F8A600C0FBD0 /* PBXTargetDependency */,
+			);
+			name = ASLHandler;
+			productName = ASLHandler;
+			productReference = 221CB98E19B9EC2700B74D0B /* ASLHandler.loghandler */;
+			productType = "com.apple.product-type.bundle";
+		};
 		22EC40D819B907F500DFADE6 /* SwiftLogging */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22EC40EC19B907F500DFADE6 /* Build configuration list for PBXNativeTarget "SwiftLogging" */;
@@ -151,10 +243,13 @@
 				22EC40E019B907F500DFADE6 /* Sources */,
 				22EC40E119B907F500DFADE6 /* Frameworks */,
 				22EC40E219B907F500DFADE6 /* Resources */,
+				22EAEA9119B9F19900C0FBD0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22EAEA9419B9F89300C0FBD0 /* PBXTargetDependency */,
+				22EAEA9619B9F89300C0FBD0 /* PBXTargetDependency */,
 			);
 			name = SwiftLoggingTests;
 			productName = SwiftLoggingTests;
@@ -170,6 +265,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Elegant Chaos";
 				TargetAttributes = {
+					221CB98D19B9EC2700B74D0B = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					22EC40D819B907F500DFADE6 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -192,11 +290,19 @@
 			targets = (
 				22EC40D819B907F500DFADE6 /* SwiftLogging */,
 				22EC40E319B907F500DFADE6 /* SwiftLoggingTests */,
+				221CB98D19B9EC2700B74D0B /* ASLHandler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		221CB98C19B9EC2700B74D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22EC40D719B907F500DFADE6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +320,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		221CB98A19B9EC2700B74D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221CB99719B9EC4E00B74D0B /* ASLHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22EC40D419B907F500DFADE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,7 +351,62 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		22EAEA9419B9F89300C0FBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22EC40D819B907F500DFADE6 /* SwiftLogging */;
+			targetProxy = 22EAEA9319B9F89300C0FBD0 /* PBXContainerItemProxy */;
+		};
+		22EAEA9619B9F89300C0FBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221CB98D19B9EC2700B74D0B /* ASLHandler */;
+			targetProxy = 22EAEA9519B9F89300C0FBD0 /* PBXContainerItemProxy */;
+		};
+		22EAEA9819B9F8A600C0FBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22EC40D819B907F500DFADE6 /* SwiftLogging */;
+			targetProxy = 22EAEA9719B9F8A600C0FBD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		221CB99319B9EC2700B74D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ASLHandler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ASLHandler/ASLHandler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = loghandler;
+			};
+			name = Debug;
+		};
+		221CB99419B9EC2700B74D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ASLHandler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ASLHandler/ASLHandler-Bridging-Header.h";
+				WRAPPER_EXTENSION = loghandler;
+			};
+			name = Release;
+		};
 		22EC40EA19B907F500DFADE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		221CB99219B9EC2700B74D0B /* Build configuration list for PBXNativeTarget "ASLHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221CB99319B9EC2700B74D0B /* Debug */,
+				221CB99419B9EC2700B74D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22EC40D319B907F500DFADE6 /* Build configuration list for PBXProject "SwiftLogging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

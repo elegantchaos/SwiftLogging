@@ -8,11 +8,15 @@
 
 import Cocoa
 
-public protocol Handler {
-    func log<T>(object: T, channel : Channel, context: Context);
-
-    func enable();
-    func disable();
-
-    func description() -> String
+public class Handler {
+    
+    internal var enabled : Bool = true
+    var name : String
+    
+    public required init(name : String) {
+        self.name = name
+    }
+    
+    internal func log<T>(object: T, channel : Channel, context: Context) {
+    }
 }

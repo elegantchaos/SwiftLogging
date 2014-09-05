@@ -11,7 +11,7 @@ import Cocoa
 class ContextFormatter {
 
     class func prefix(channel : Channel, context : Context) -> String {
-        let result = (channel.showName) ? "\(channel.name): " : ""
+        let result = (channel.showName) ? "\(channel.name)» " : ""
         return result
     }
 

@@ -1,14 +1,14 @@
 //
-//  ConsoleHandler.swift
+//  ASLHandler.swift
 //  SwiftLogging
 //
-//  Created by Sam Deane on 04/09/2014.
+//  Created by Sam Deane on 05/09/2014.
 //  Copyright (c) 2014 Elegant Chaos. All rights reserved.
 //
 
-import Foundation
+import SwiftLogging
 
-public class ConsoleHandler: Handler {
+public class ASLHandler : SwiftLogging.ConsoleHandler {
     override internal func log<T>(object: T, channel : Channel, context: Context) {
         if enabled {
             let prefix = ContextFormatter.prefix(channel, context: context)
@@ -16,4 +16,5 @@ public class ConsoleHandler: Handler {
             println("\(prefix)\(object)\(suffix)")
         }
     }
+
 }

@@ -12,10 +12,19 @@ import SwiftLogging
 
 let testChannel = Channel(name:"test")
 
+func logFromFunc() {
+    testChannel.log("hello from a global function")
+}
+
 class SwiftLoggingTests: XCTestCase {
 
     var funcCalled : Bool = false
 
+    override func setUp() {
+        let bundle = NSBundle(forClass:self.dynamicType)
+        defaultManager.registerHandlersFromBundle(bundle)
+    }
+    
     func calculatedValue() -> Int {
         self.funcCalled = true;
         return 123;
@@ -36,10 +45,13 @@ class SwiftLoggingTests: XCTestCase {
 
         testChannel.log("hello")
 
+        logFromFunc()
+
         channel.enabled = false
         channel.log("this shouldn't be logged \(self.calculatedValue())")
         channel.log(23 * self.calculatedValue())
 
+        
         XCTAssertFalse(self.funcCalled, "shouldn't evaluate expression for disabled channel")
     }
     
