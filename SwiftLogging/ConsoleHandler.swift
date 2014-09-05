@@ -9,7 +9,7 @@
 import Foundation
 
 public class ConsoleHandler: Handler {
-    override internal func log<T>(object: T, channel : Channel, context: Context) {
+    override public func log<T>(object: T, channel : Channel, context: Context) {
         if enabled {
             let prefix = ContextFormatter.prefix(channel, context: context)
             let suffix = ContextFormatter.suffix(channel, context: context)

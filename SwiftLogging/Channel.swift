@@ -9,7 +9,7 @@
 import Cocoa
 
 public class Channel {
-
+    
     let name: String
     var handlers: [Handler]
     public var enabled: Bool;
@@ -17,21 +17,21 @@ public class Channel {
     public var showFile : Bool = false
     public var showLineColumn : Bool = false
     public var showFunction : Bool = true
-
+    
     public init(name: String) {
-
-            self.name = name
-            self.handlers = [Handler]()
-            self.enabled = true;
-
-            defaultManager.registerChannel(self);
+        
+        self.name = name
+        self.handlers = [Handler]()
+        self.enabled = true;
+        
+        defaultManager.registerChannel(self);
     }
-
-
+    
+    
     public func addHandler(handler : Handler) {
         self.handlers.append(handler)
     }
-
+    
     public func log<T>(
         message: @autoclosure() -> T,
         file: String = __FILE__,
@@ -45,7 +45,6 @@ public class Channel {
                     handler.log(object, channel:self, context:context)
                 }
             }
+    }
+    
 }
-
-}
-// https://github.com/hubertr/Swell
