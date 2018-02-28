@@ -16,4 +16,13 @@ public class ConsoleHandler: Handler {
             println("\(prefix)\(object)\(suffix)")
         }
     }
+    
+//    override public func log<String>(object : String, channel : Channel, context : Context) {
+//        if enabled {
+//            println("I was specialised for logging strings")
+//            let prefix = ContextFormatter.prefix(channel, context: context)
+//            let suffix = ContextFormatter.suffix(channel, context: context)
+//            println("\(prefix)\(string)\(suffix)")
+//        }
+//    }
 }

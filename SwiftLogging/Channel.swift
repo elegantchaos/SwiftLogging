@@ -34,10 +34,10 @@ public class Channel {
     
     public func log<T>(
         message: @autoclosure() -> T,
-        file: String = __FILE__,
-        line: Int = __LINE__,
-        column: Int = __COLUMN__,
-        function: String = __FUNCTION__) {
+        file: String = #file,
+        line: Int = #line,
+        column: Int = #column,
+        function: String = #function) {
             if (self.enabled) {
                 let object = message()
                 let context = Context(file:file, line:line, column:column, function:function)
@@ -49,10 +49,10 @@ public class Channel {
     
     public func debug<T>(
         message: @autoclosure() -> T,
-        file: String = __FILE__,
-        line: Int = __LINE__,
-        column: Int = __COLUMN__,
-        function: String = __FUNCTION__) {
+        file: String = #file,
+        line: Int = #line,
+        column: Int = #column,
+        function: String = #function) {
             #if EC_DEBUG
                 log(message, file:file, line:line, column: column, function:function)
             #endif
