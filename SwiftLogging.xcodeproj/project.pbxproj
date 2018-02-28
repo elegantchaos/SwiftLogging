@@ -67,6 +67,7 @@
 		221CB99619B9EC4E00B74D0B /* ASLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLHandler.swift; sourceTree = "<group>"; };
 		229CF5F819BA107500241D7E /* ECLogging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECLogging.plist; path = SwiftLoggingTests/ECLogging.plist; sourceTree = SOURCE_ROOT; };
 		229CF5F919BA107500241D7E /* ECLoggingDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECLoggingDebug.plist; path = SwiftLoggingTests/ECLoggingDebug.plist; sourceTree = SOURCE_ROOT; };
+		22E4DA8B19CAEA0E0002180E /* Extras */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extras; sourceTree = "<group>"; };
 		22EC40D919B907F500DFADE6 /* SwiftLogging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLogging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EC40DD19B907F500DFADE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EC40DE19B907F500DFADE6 /* SwiftLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLogging.h; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 				22EC40E519B907F500DFADE6 /* Tests */,
 				221CB98F19B9EC2700B74D0B /* ASLHandler */,
 				22EC40DA19B907F500DFADE6 /* Products */,
+				22E4DA8B19CAEA0E0002180E /* Extras */,
 			);
 			sourceTree = "<group>";
 		};
